@@ -81,13 +81,13 @@ DATABASES = {
     }
 }
 
-CACHE_TTL = 60 * 1500
+CACHE_TTL = 60 * 1500   # in seconds
 
 # redis-server --port 6360 (command for start a redis server)
 CACHES = {
     "default": {
         "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://127.0.0.1:6360/1",
+        "LOCATION": "redis://127.0.0.1:6379/1",
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient"
         },

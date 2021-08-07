@@ -45,3 +45,9 @@ def show(request , id):
         cache.set(id , recipe)
     context = {'recipe' : recipe}
     return render(request, 'show.html' , context)
+
+def test(request):
+    print(cache.keys('*'),'get_cache')
+    cache.delete('2')
+    print(cache.keys('*'),'get_cache')
+    return

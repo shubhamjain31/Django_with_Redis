@@ -5,3 +5,5 @@ venv/
 redis-6.2.1/
 
 __pycache__/
+
+.env
